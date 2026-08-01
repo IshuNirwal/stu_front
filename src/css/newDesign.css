@@ -1,0 +1,958 @@
+.steps-section {
+    padding: 40px 20px;
+  }
+  
+  
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  .steps-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    max-height: calc(100vh - 20px);
+    scrollbar-width: none;
+  }
+  
+  .step {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+    padding: 11rem 1rem;
+  }
+  
+  .step h3{
+    font-weight: 700;
+    margin-bottom: 4rem;
+    font-size: 2.1rem;
+    color: black;
+  }
+  
+  .step h5 {
+    color: var(--logo-teal);
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    font-weight: revert;
+    text-align: left;
+    line-height: 1.2;
+  }
+  
+  .step p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    font-weight: 400;
+  }
+  
+  .apply-now-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffaa32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .steps-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .step-illustration {
+    transition: opacity 0.3s ease-in-out;
+    width: 55%;
+    border-radius: 10px;
+    padding-bottom: 1px;
+    position: static;
+    margin-left: 35%;
+  }
+  
+  .gif-bullets {
+    position: sticky;
+    left: 83%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+  
+  .bullet.active {
+    background-color: var(--logo-teal);
+  }
+  
+  
+  
+  
+   /* Parallax Section 2 Styling */
+  .parallax-section2 {
+      position: relative;
+      background: url('../images/BANNER\ 3.png') no-repeat center center fixed;
+      background-size: cover;
+      padding: 0rem 4rem;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap; /* Allows content to wrap in smaller screens */
+    }
+    
+    .content .left,
+    .content .right {
+      flex: 1;
+      padding: 9rem 0rem;
+      text-align: left;
+    }
+    
+    .content .left {
+      text-align: left;
+    }
+    
+    .content .right {
+      text-align: right;
+    }
+    
+    .parallax-section2 .jumbotron {
+      margin: 0;
+      border-radius: 0;
+    }
+    
+    .parallax-section2 .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .parallax-heading {
+      font-size: 48px;
+      font-weight: bold;
+      color: var(--logo-teal);
+      margin: 0;
+    }
+    
+    .getMoneyHeading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: var(--logo-teal);
+    }
+    
+    .parallax-section2para {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #ffffff;
+      margin: 20px 0;
+    }
+  
+    .header-btn {
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: var(--logo-teal) !important;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .header-btn:hover {
+      color: var(--logo-teal);
+      background-color: #ffffff !important;
+      border: 2px solid var(--logo-teal) !important;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .parallax-heading {
+        font-size: 42px;
+      }
+      .parallax-heading3 {
+        font-size: 42px;
+      }
+    
+      .getMoneyHeading {
+        font-size: 22px;
+      }
+    
+      .parallax-section2para {
+        font-size: 17px;
+      }
+    
+      .header-btn {
+        font-size: 17px;
+        padding: 9px 25px;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .parallax-heading {
+        font-size: 40px;
+      }
+    
+      .getMoneyHeading {
+        font-size: 21px;
+      }
+    
+      .parallax-section2para {
+        font-size: 16px;
+      }
+    
+      .header-btn {
+        font-size: 16px;
+        padding: 8px 22px;
+      }
+    
+      /* Adjust content layout for tablet and smaller screens */
+      .content .left,
+      .content .right {
+        flex: 1 100%;
+        padding: 5rem 0;
+        text-align: center;
+      }
+    }
+    
+  /* General mobile/tablet compression */
+@media (max-width: 768px) {
+  .step {
+    padding: 4rem 1rem;
+    margin: 10px 0;
+  }
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .step h5 {
+    font-size: 2rem;
+  }
+  .step p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .step-illustration {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gif-bullets {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .image-wrapper {
+    width: 80%;
+    margin: 0 auto 20px auto;
+  }
+  .text-wrapper {
+    text-align: center;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .best_img {
+    width: 90%;
+    margin: 2rem auto;
+    float: none;
+    display: block;
+  }
+}
+
+/* Tiny phones only */
+@media (max-width: 480px) {
+  .step h3 { font-size: 1.2rem; }
+  .step h5 { font-size: 1.5rem; }
+  .step p  { font-size: 13px; }
+  .title   { font-size: 1.6rem; }
+  .subtitle{ font-size: 1rem; }
+}
+
+    
+    .page-scroll {
+      height: 50px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    
+   /* Parallax Section 3 Styling */
+  
+   .parallax-section3 {
+    position: relative;
+    background: url('../images/BANNER\ 3.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0rem 4rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .content3 {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allows content to wrap in smaller screens */
+  }
+  
+  .content .left3,
+  .content .right3 {
+    flex: 1;
+    padding: 9rem 0rem;
+    text-align: center;
+  }
+  
+  .parallax-section2 .jumbotron {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .parallax-section2 .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .parallax-heading3 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .right3 {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .form-input {
+    margin-left: 25px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .form-input:focus {
+    border-color: var(--logo-teal);
+    box-shadow: 0px 0px 5px rgba(26, 155, 155, 0.5);
+  }
+  
+  /* Style for checkbox container */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox-container label {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .parallax-section3 {
+        padding: 0rem 2rem; /* Reduce padding on larger screens */
+    }
+  
+    .parallax-heading3 {
+        font-size: 36px; /* Adjust heading size for medium screens */
+    }
+  
+    .content3 {
+        padding: 2rem;
+    }
+  
+    .content .left3,
+    .content .right3 {
+        flex: 1 1 45%; /* Allow columns to take up 45% of the width */
+        padding: 4rem 0rem;
+    }
+  
+    .right3 {
+        padding: 1rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .parallax-heading3 {
+        font-size: 32px; /* Reduce font size for smaller screens */
+    }
+  
+    .content3 {
+        padding: 1rem;
+    }
+  
+    .content .left3,
+    .content .right3 {
+        flex: 1 1 100%; /* Make the columns stack vertically */
+        padding: 3rem 0rem;
+    }
+  
+    .form-input {
+        width: 100%; /* Make input fields take up full width */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add some space between inputs */
+    }
+  
+    .checkbox-container {
+        flex-direction: row; /* Stack checkbox and label vertically */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .parallax-heading3 {
+        font-size: 28px; /* Reduce font size further for very small screens */
+    }
+  
+    .parallax-section3 {
+        padding: 1rem; /* Reduce padding for small screens */
+    }
+  
+    .content3 {
+        padding: 1rem;
+    }
+  
+    .content .left3,
+    .content .right3 {
+        padding: 2rem 0rem;
+    }
+  
+    .form-input {
+        font-size: 14px; /* Reduce font size of input fields */
+    }
+  
+    .checkbox-container label {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .parallax-heading3 {
+        font-size: 24px; /* Reduce font size for extra small screens */
+    }
+  
+    .content3 {
+        padding: 0.5rem;
+    }
+  
+    .form-input {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px; /* Reduce padding */
+    }
+  
+    .checkbox-container {
+        flex-direction: row; /* Stack checkbox vertically */
+    }
+  }
+  
+  
+    /* Section last css */
+  
+  
+  
+    /* Container for the video background */
+  .container.video-bg {
+      position: relative;
+      width: 100%;
+      overflow: hidden; /* Ensures that any overflowing content is hidden */
+    }
+    
+    .video-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; /* Ensures the video stays in the background */
+    }
+    
+    .fullscreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Makes sure the video covers the entire area */
+      z-index: -1; /* Ensures the video stays in the background */
+    }
+    
+    .content.about-section {
+      position: relative;
+      width: 80%;
+      z-index: 1; /* Ensures content is on top of the video */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%; /* Ensures the content takes full height */
+      padding: 0 20px; /* Adds padding to prevent content from touching the edges */
+      color: white; /* Makes the text color white to contrast against the video */
+    }
+    
+    .left {
+      width: 50%;
+      padding: 3rem 0rem 0rem;
+    }
+    .left p{
+      font-size: 22px;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+    
+    .right {
+      width: 50%;
+      text-align: right;
+    }
+    
+    .right h1 {
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+    
+   /* Mobile responsiveness for devices with a width of 768px or less */
+  @media (max-width: 768px) {
+      .content.about-section {
+          flex-direction: column; /* Stack the sections vertically */
+          text-align: center; /* Center-align text */
+          padding: 0 10px; /* Adjust padding */
+      }
+  
+      /* Full width for left and right sections */
+      .left, .right {
+          width: 100%;
+          margin-bottom: 20px; /* Adds space between the sections */
+      }
+  
+      /* Adjust font size for headings on smaller screens */
+      .right h1 {
+          font-size: 1.8rem;
+      }
+  
+      /* Adjust paragraph font size and padding for smaller screens */
+      .left p {
+          font-size: 18px; /* Slightly smaller text */
+          margin-bottom: 20px; /* Adjust bottom margin */
+      }
+  }
+  
+  /* Extra small devices (phones in portrait mode, below 480px) */
+  @media (max-width: 480px) {
+      .left p {
+          font-size: 16px; /* Further reduce text size */
+          margin-bottom: 15px; /* Reduce space between paragraphs */
+      }
+  
+      .right h1 {
+          font-size: 1.6rem; /* Smaller heading font size */
+      }
+  }
+  
+   /* end section last css   */
+  
+  .map-section{
+      position: relative;
+      width: 100%;
+      z-index: 1; /* Ensures content is on top of the video */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 80vh; /* Ensures the content takes full height */
+      padding: 3rem 2rem 3rem;
+      color: white;
+      margin-bottom: 100px;}
+  
+   .image-map{
+       background: url('../images/home_5.jpg') no-repeat center center fixed;
+      width: 50%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      -webkit-transition: -webkit-transform .5s ease-out;
+      transition: -webkit-transform .5s ease-out;
+      transition: transform .5s ease-out;
+      transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+   }
+   .content-map h4{
+      font-weight: 600;
+      font-size: 3.2rem;
+      line-height: 1;
+      text-align: right;
+   }
+   .content-map p{
+      color: black;
+      font-size: 20px;
+      margin-top: 10px;
+      text-align: right;
+   }
+   .image-map :hover{
+      transform: scale(1);
+      transform-origin: 83.4385% 98.9116%;
+   }
+  
+  
+   /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+      .map-section {
+          flex-direction: column; /* Stack elements vertically */
+          height: auto; /* Allow content to be flexible */
+          padding: 2rem 1rem; /* Reduce padding */
+          margin-bottom: 50px; /* Reduce bottom margin */
+      }
+  
+      .image-map {
+          width: 100%; /* Make the image map take full width */
+          height: 100vh; /* Adjust height for smaller screens */
+          background-size: cover; /* Ensure the image scales properly */
+      }
+  
+      .content-map h4 {
+          font-size: 2rem; /* Smaller font size for heading */
+          text-align: center; /* Center-align text */
+      }
+  
+      .content-map p {
+          font-size: 16px; /* Smaller font size for paragraph */
+          text-align: center; /* Center-align text */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .map-section {
+          padding: 1.5rem 0.5rem; /* Further reduce padding */
+      }
+  
+      .image-map {
+          height: 100vh; /* Further reduce height of image map */
+      }
+  
+      .content-map h4 {
+          font-size: 1.5rem; /* Adjust heading font size */
+          margin-top: 15px;
+      }
+  
+      .content-map p {
+          font-size: 14px; /* Adjust paragraph font size */
+      }
+      .content-map .apply-now-btn{
+          margin-bottom: 40px;
+      }
+  }
+  
+  
+  
+  .app-download-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+    flex-direction: row;
+    gap: 10%;
+  }
+  
+  .left-section {
+    flex: 1 1;
+    width: 60%;
+    text-align: left;
+    display: flex;
+  }
+  
+  .qr-code img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .download-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222;
+    line-height: 1.1;
+  }
+  
+  .highlight {
+    color: #222;
+  }
+  
+  .instruction-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .phone-input-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .country-code {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  .phone-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .get-app-btn {
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .right-section {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .floating-phone {
+    width: 40%;
+  }
+  
+  .floating-phone video {
+    width: 100%;
+  }
+  
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat p {
+    color: #444;
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Add media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .app-download-container {
+      padding: 30px;
+      gap: 5%;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .download-text {
+      font-size: 2.5rem;
+    }
+  
+    .highlight {
+      font-size: 2.5rem;
+    }
+  
+    .floating-phone {
+      width: 50%;
+    }
+  
+    .stats-section {
+      gap: 15px;
+    }
+  
+    .stat p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app-download-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .left-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .right-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .download-text {
+      font-size: 2rem;
+    }
+  
+    .phone-input-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .country-code {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .phone-input {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    .get-app-btn {
+      width: 80%;
+      margin-top: 10px;
+    }
+  
+    .floating-phone {
+      width: 70%;
+    }
+  
+    .stats-section {
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .stat p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-download-container {
+      padding: 15px;
+    }
+  
+    .download-text {
+      font-size: 1.8rem;
+    }
+  
+    .highlight {
+      font-size: 1.8rem;
+    }
+  
+    .phone-input {
+      width: 100%;
+    }
+  
+    .get-app-btn {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .floating-phone {
+      width: 80%;
+    }
+  
+    .stats-section {
+      flex-direction: row;
+      gap: 15px;
+    }
+  
+    .stat p {
+      font-size: 0.75rem;
+    }
+  }
+  
+
+  .home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 20px; /* Adds padding to prevent elements from touching edges on small screens */
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 100%;
+    z-index: 1;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+   
+}
+
+.image-wrapper {
+    width: 63%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-wrapper {
+    padding: 10px; /* Padding for small screen */
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.best_img{
+    width: 73%;
+    margin: 4rem 0rem;
+    float: right;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 1.58rem;
+    text-align: right;
+    line-height: 1;
+}

@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+User-agent: Googlebot
+Allow: /
+Host: https://www.salarytopup.com
+Sitemap: https://salarytopup.com/sitemap.xml

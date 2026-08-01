@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --site-container: 1170px;
+  --site-gutter: 20px;
+
+  /* Sampled from the logo mark; teal matches the navbar Apply Now button */
+  --logo-navy: #2e6279;
+  --logo-navy-dark: #1f4a5c;
+  --logo-teal: #1a9b9b;
+  --logo-teal-dark: #147d7d;
+  --logo-navy-rgb: 46, 98, 121;
+  --logo-teal-rgb: 26, 155, 155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--title-font);
+  font-weight: 400;
+  color: var(--body-color);
+  line-height: 26px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1950px) {
+  
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+:root {
+  --theme-color: var(--logo-teal);
+  --theme-color2: var(--logo-navy);
+  --title-color: #141D38;
+  --body-color: #737887;
+  --white-color: #fff;
+  --smoke-color: #F5F5F5;
+  --smoke-color2: #E2E8FA;
+  --smoke-color3: #EFF1F9;
+  --black-color: #000000;
+  --black-color2: #080E1C;
+  --gray-color: #bdbdbd;
+  --white-color: #ffffff;
+  --light-color: #72849B;
+  --yellow-color: #FFB539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --th-border-color: #E0E0E0;
+  --title-font: 'Barlow', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1220px;
+  --container-gutters: 24px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 5s;
+
+  /* Flat, solid design tokens (kept as CSS vars so every card/surface across the
+     site stays in sync from this one place). */
+  --glass-bg: #ffffff;
+  --glass-bg-dark: var(--title-color);
+  --glass-border: rgba(20, 29, 56, 0.08);
+  --glass-blur: blur(0px);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --shadow-soft: 0 2px 10px rgba(20, 29, 56, 0.06);
+  --shadow-elevated: 0 6px 18px rgba(20, 29, 56, 0.10);
+  --gradient-brand: linear-gradient(135deg, var(--logo-teal), var(--logo-navy));
+}
+
+/* Eyebrow / section-label used above headings. */
+.sub_title {
+  display: inline-block;
+}

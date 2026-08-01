@@ -1,0 +1,37 @@
+
+.ms-uname, .ms-fname, .ms-status, .ms-dob, .ms-gender, .ms-mobile, .ms-alt-mobile, .ms-mail{
+    width: 25%;  
+
+}
+.loanAmt, .tenure{
+    height: 80px;
+    width: 150px;
+
+}
+.loan-details-wrap{
+        background: rgba(190, 209, 252, 0.16);
+}
+.loan-histort-header {
+    background: rgba(190, 209, 252, 0.38);
+}
+.loan-section-1, .loan-section-3, .ms-address-wrap, .other-wrap{
+    padding: 5px 20px;
+
+}
+.loan-section-3{
+    flex-wrap: wrap;
+}
+.user-info {
+    padding: 10px 15px;
+    background: #fff;
+    margin: 18px;
+    border: 1px solid #dddddd4d;
+}
+.ms-month-income, .ms-pancard, .ms-adhar, .ms-loan-purpuse {
+    background:rgba(228, 228, 230, 0.54);
+    padding: 10px 20px;
+    border:1px solid #ddd;
+}
+.card-data {
+    padding-left: 15px;
+}

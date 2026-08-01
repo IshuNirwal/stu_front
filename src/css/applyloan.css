@@ -1,0 +1,555 @@
+/* ===== Apply For Loan – Google landing content (below login form) ===== */
+
+.apply-landing {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #ffffff;
+}
+
+.apply-landing .al-container {
+  width: 100%;
+  max-width: var(--site-container);
+  margin: 0 auto;
+  padding: 0 var(--site-gutter);
+}
+
+.apply-landing .al-container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.apply-landing .al-section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.apply-landing .al-section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.apply-landing .al-section-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.apply-landing .al-highlight {
+  color: #108185;
+}
+
+/* ---- Eligibility ---- */
+.apply-landing .al-eligibility {
+  padding: 70px 0;
+  background: #f7f9fc;
+}
+
+.apply-landing .al-eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.apply-landing .al-card {
+  background: #fff;
+  border: 1px solid #e6ebf3;
+  border-radius: 16px;
+  padding: 30px 22px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-landing .al-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(38, 185, 219, 0.12);
+}
+
+.apply-landing .al-card-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #26b9db, #2c4a5e);
+}
+
+.apply-landing .al-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.apply-landing .al-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ---- Loan calculator ---- */
+.apply-landing .al-calculator {
+  padding: 70px 0;
+}
+
+.apply-landing .al-calculator-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 34px 30px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef1f6;
+}
+
+.apply-landing .al-calc-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #27607d;
+  margin-bottom: 24px;
+}
+
+.apply-landing .al-input {
+  margin-bottom: 22px;
+}
+
+.apply-landing .al-input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.apply-landing .al-input-label span {
+
+  font-weight: 700;
+}
+
+.apply-landing .al-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  background: #e2e8f0;
+  outline: none;
+}
+
+.apply-landing .al-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #27607d;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.apply-landing .al-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #27607d;
+  cursor: pointer;
+  border: 3px solid #fff;
+}
+
+.apply-landing .al-result {
+  margin-top: 26px;
+  border-top: 1px dashed #d9e0ea;
+  padding-top: 20px;
+}
+
+.apply-landing .al-result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.apply-landing .al-result-item .al-result-label {
+  color: #555;
+}
+
+.apply-landing .al-result-item .al-result-value {
+  font-weight: 700;
+  color: #111;
+}
+
+.apply-landing .al-calc-cta {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  background: linear-gradient(135deg, #26b9db, #2c4a5e);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.apply-landing .al-calc-cta:hover {
+  opacity: 0.9;
+}
+
+/* ---- Process steps ---- */
+.apply-landing .al-steps-section {
+  padding: 70px 0;
+  background: #f7f9fc;
+}
+
+.apply-landing .al-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.apply-landing .al-step {
+  background: #fff;
+  border-radius: 16px;
+  padding: 34px 24px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #e6ebf3;
+}
+
+.apply-landing .al-step-number {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #26b9db, #2c4a5e);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply-landing .al-step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.apply-landing .al-step p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ---- Terms & Conditions ---- */
+.apply-landing .al-terms {
+  background: linear-gradient(135deg, #f3fbfd, #eef6f8);
+}
+
+.apply-landing .al-terms-header {
+  margin: 0 0 28px;
+}
+
+.apply-landing .al-terms-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  /* color: var(--theme-color); */
+  margin-bottom: 16px;
+}
+
+.apply-landing .al-terms-header p {
+  color: #5b6b80;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.apply-landing .al-terms-header strong {
+  color: var(--title-color);
+}
+
+
+
+.apply-landing .al-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ---- Illustration (representative example) ---- */
+.apply-landing .al-illustration {
+  align-self: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #eef1f6;
+  padding: 28px 26px;
+}
+
+.apply-landing .al-illustration-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #27607d; /* logo color */
+  margin-bottom: 18px;
+}
+
+.apply-landing .al-illustration-sub {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.apply-landing .al-illustration-sub strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #108185; /* logo color */
+  margin-bottom: 4px;
+}
+
+.apply-landing .al-illustration-sub span {
+  font-size: 0.9rem;
+  color: #6b7a8d;
+}
+
+.apply-landing .al-illustration-card {
+  background: #fff;
+  padding: 24px 22px;
+}
+
+.apply-landing .al-illustration-intro {
+  text-align: center;
+  font-size: 0.92rem;
+  color: #5b6b80;
+  margin-bottom: 18px;
+}
+
+.apply-landing .al-illustration-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-landing .al-ill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 0.92rem;
+}
+
+.apply-landing .al-ill-row > span:first-child {
+  color: #3a4658;
+  font-weight: 600;
+}
+
+.apply-landing .al-ill-row > span:last-child {
+  font-weight: 700;
+  text-align: right;
+}
+
+.apply-landing .al-ill-final {
+  background: #e9f9ef;
+  border-radius: 10px;
+  border-bottom: none;
+  margin-top: 6px;
+  padding: 14px 12px;
+}
+
+.apply-landing .al-ill-final > span {
+  color: #108185 !important; /* use logo color for final row */
+}
+
+.apply-landing .al-terms-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e6ebf3;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 6px 18px rgba(38, 185, 219, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-landing .al-terms-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(38, 185, 219, 0.12);
+}
+
+.apply-landing .al-terms-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #27607d;
+  background: #e3f6fa;
+}
+
+.apply-landing .al-terms-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-landing .al-terms-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.apply-landing .al-terms-label {
+  font-size: 0.9rem;
+  color: #6b7a8d;
+}
+
+/* ---- CTA ---- */
+.apply-landing .al-cta {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #26b9db, #141D38);
+  color: #fff;
+}
+
+.apply-landing .al-cta h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.apply-landing .al-cta p {
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.apply-landing .al-cta-btn {
+  display: inline-block;
+  background: #ffb300;
+  color: #111;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 8px 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-landing .al-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 179, 0, 0.4);
+}
+
+.apply-landing .al-cta-contact {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 8px 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.apply-landing .al-cta-contact:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+  .apply-landing .al-eligibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  /* stack the two columns: cards on top, illustration below */
+  .apply-landing .al-terms-row {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+  .apply-landing .al-steps {
+    grid-template-columns: 1fr;
+  }
+  .apply-landing .al-section-header h2 {
+    font-size: 1.6rem;
+  }
+  .apply-landing .al-terms-header h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .apply-landing .al-eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+  .apply-landing .al-terms-grid {
+    grid-template-columns: 1fr;
+  }
+  .apply-landing .al-ill-row {
+    flex-direction: column;
+    align-items: flex-center;
+    gap: 4px;
+  }
+  .apply-landing .al-ill-row > span:last-child {
+    text-align: left;
+  }
+}
+
+/* two-column layout for disbursal + calculator */
+.two-col-row {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.al-terms-left,
+.al-terms-right {
+  flex: 1 1 48%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.al-terms-left .al-illustration,
+.al-terms-right .al-calculator-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.al-terms-left .al-illustration-card {
+  flex: 1;
+}
+
+/* make calculator column visually consistent */
+.al-terms-right .al-calculator-card {
+  margin-top: 0;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 768px) {
+  .al-terms-left,
+  .al-terms-right {
+    flex: 1 1 100%;
+  }
+}

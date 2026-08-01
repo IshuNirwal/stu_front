@@ -1,0 +1,7 @@
+# Redirect non-www and HTTP to https://www.salarytopup.com
+http://salarytopup.com/* https://www.salarytopup.com/:splat 301!
+http://www.salarytopup.com/* https://www.salarytopup.com/:splat 301!
+https://salarytopup.com/* https://www.salarytopup.com/:splat 301!
+
+# React SPA fallback - keep this if using React Router
+/* /index.html  200

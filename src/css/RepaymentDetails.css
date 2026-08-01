@@ -1,0 +1,231 @@
+.repayment-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--glass-bg, rgba(255,255,255,0.7));
+    backdrop-filter: var(--glass-blur, blur(16px));
+    -webkit-backdrop-filter: var(--glass-blur, blur(16px));
+    border: 1px solid var(--glass-border, rgba(255,255,255,0.35));
+    border-radius: var(--radius-lg, 20px);
+    padding: 20px;
+    box-shadow: var(--shadow-elevated, 0px 8px 20px rgba(0, 0, 0, 0.1));
+    font-family: 'Arial', sans-serif;
+}
+
+.repayment-header h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.repayment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: rgba(249, 249, 249, 0.6);
+    border-radius: var(--radius-sm, 12px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft, 0 8px 24px rgba(20,29,56,0.08));
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #000;
+}
+
+.due-amount .value {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.repayment-button-container {
+    text-align: center;
+}
+
+.repayment-button {
+    background: var(--gradient-brand, linear-gradient(135deg, #1a9b9b, #2e6279));
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: var(--radius-sm, 12px);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft, 0 6px 16px rgba(26,155,155,0.25));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.repayment-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elevated, 0 10px 24px rgba(26,155,155,0.35));
+}
+
+
+/* General container for the rate section */
+.rate {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: var(--glass-bg, rgba(255,255,255,0.7));
+    backdrop-filter: var(--glass-blur, blur(16px));
+    -webkit-backdrop-filter: var(--glass-blur, blur(16px));
+    border: 1px solid var(--glass-border, rgba(255,255,255,0.35));
+    border-radius: var(--radius-lg, 20px);
+    box-shadow: var(--shadow-soft, 0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Heading Styles */
+.rate h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.rate h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Paragraph Styling */
+.rate p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+    text-align: left !important;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+th, td {
+    /* border: 1px solid #ddd; */
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table header styling */
+th {
+    background-color: rgba(26, 155, 155, 0.08);
+    font-weight: bold;
+    color: #333;
+    border-radius: 6px;
+}
+
+/* Alternate row background */
+/* tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+/* Table data styling */
+td {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    /* Repayment Card */
+    .repayment-card {
+        padding: 15px;
+    }
+
+    .repayment-header h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .info-item {
+        padding: 8px;
+    }
+
+    .label,
+    .value {
+        font-size: 14px;
+    }
+
+    .repayment-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Rate Section */
+    .rate {
+        width: 95%;
+        padding: 12px;
+        margin-bottom: 80px;
+    }
+
+    .rate h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .rate h3 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .rate p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    table, th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+/* Extra compression for very small screens */
+@media (max-width: 480px) {
+    .repayment-header h2 {
+        font-size: 16px;
+    }
+
+    .label,
+    .value {
+        font-size: 12px;
+    }
+
+    .repayment-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .rate h2 {
+        font-size: 18px;
+    }
+
+    .rate h3 {
+        font-size: 14px;
+    }
+
+    .rate p,
+    table, th, td {
+        font-size: 12px;
+    }
+}
+
+
+
+
+

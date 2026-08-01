@@ -1,0 +1,57 @@
+/* PaymentModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 22;
+  }
+  
+  .payment-popup{
+    background-color:#fff !important;
+    width:50% !important;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .modal-actions {
+    margin-top: 20px;
+  }
+  
+  .cancel-button, .pay-button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background: #ccc;
+  }
+  
+  .pay-button {
+    background: #26b9db;
+    color: white;
+  }
+  
+
+.payu-image,
+.paytm-image {
+  transition: filter 0.25s ease;
+}
+
+.payu-image:hover,
+.paytm-image:hover {
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.44));
+}

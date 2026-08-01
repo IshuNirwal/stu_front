@@ -1,0 +1,74 @@
+.buttonWrapper {
+  background-image: linear-gradient(to right, #26B9DB, #5D99E7);
+  border-radius: 30px;
+  font-size: 15px;
+  color: #FFFFFF;
+  height: 35px;
+  padding: auto 20px;
+  width: 100%;
+  transition: all 0.3s;
+  border: 0;
+  white-space: nowrap;
+}
+
+.buttonWrapper:hover {
+  background-image: linear-gradient(to left, #3f92ff, #177388);
+  color: #ffffff;
+}
+
+.buttonWrapper:disabled:hover {
+  background: #26B9DB;
+  color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+/* Loader inside button */
+.loader {
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  margin-inline: auto;
+  animation:
+    l20-1 0.8s infinite linear alternate,
+    l20-2 1.6s infinite linear;
+}
+
+/* Keyframes */
+@keyframes l20-1 {
+  0%    {clip-path: polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%)}
+  12.5% {clip-path: polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%)}
+  25%   {clip-path: polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%)}
+  50%   {clip-path: polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%)}
+  62.5% {clip-path: polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%)}
+  75%   {clip-path: polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%)}
+  100%  {clip-path: polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%)}
+}
+@keyframes l20-2 {
+  0%    {transform: scaleY(1) rotate(0deg)}
+  49.99%{transform: scaleY(1) rotate(135deg)}
+  50%   {transform: scaleY(-1) rotate(0deg)}
+  100%  {transform: scaleY(-1) rotate(-135deg)}
+}
+
+/* Variant: selfyButton */
+.selfyButton {
+  background: transparent;
+  max-width: 300px;
+  gap: 4px;
+  height: 50px;
+}
+.selfyButton span {
+  color: #26B9DB;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .buttonWrapper {
+    font-size: 12px;
+    height: 30px;
+  }
+  .loader {
+    width: 18px;
+  }
+}

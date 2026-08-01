@@ -1,0 +1,480 @@
+:root {
+  --brand-teal: #1a9b9b;
+  --brand-teal-dark: #147d7d;
+  --brand-navy: #2d4a5e;
+  --brand-coral: #c85a54
+}
+
+.header-laravel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #fff;
+  width: 100%;
+  border-bottom: 1px solid rgba(45, 74, 94, .08);
+  box-shadow: 0 2px 10px rgba(45, 74, 94, .05);
+  transition: box-shadow .3s ease, padding .3s ease, background .3s ease
+}
+
+.header-laravel.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #fff;
+  border-bottom: 1px solid rgba(45, 74, 94, .08);
+  z-index: 1000 !important;
+  box-shadow: 0 4px 16px rgba(45, 74, 94, .1);
+  animation: slideDown .45s cubic-bezier(.22, 1, .36, 1)
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: .4
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+.header-laravel.sticky .logo img {
+  width: 58px
+}
+
+.btn-apply-now,
+.btn-pay-now {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all .3s cubic-bezier(.22,1,.36,1);
+  border-radius: var(--radius-sm, 12px);
+  line-height: 1;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid var(--brand-teal)
+}
+
+.btn-apply-now {
+  background: var(--gradient-brand, linear-gradient(135deg, var(--brand-teal), var(--brand-navy)));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(26, 155, 155, .3)
+}
+
+.btn-apply-now::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .5), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease
+}
+
+.btn-apply-now:hover::after {
+  left: 140%
+}
+
+.btn-pay-now {
+  background: #fff;
+  color: var(--brand-teal-dark)
+}
+
+.btn-apply-now:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(26, 155, 155, .42)
+}
+
+.btn-pay-now:hover {
+  background: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(26, 155, 155, .3)
+}
+
+.logo img {
+  transition: transform .3s ease, width .35s ease;
+  width: 70px
+}
+
+.logo img:hover {
+  transform: scale(1.05)
+}
+
+.nav-laravel {
+  min-width: 58%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  color: #fff
+}
+
+.nav-laravel ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin-top: 13px;
+  padding: 0
+}
+
+.nav-laravel ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--brand-navy);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: color .25s ease
+}
+
+.nav-laravel ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--brand-teal), var(--brand-coral));
+  transition: width .28s ease
+}
+
+.nav-laravel ul li a:hover {
+  color: var(--brand-teal)
+}
+
+.nav-laravel ul li a:hover::after {
+  width: 100%
+}
+
+@media screen and (max-width: 1024px) {
+  .header-laravel.sticky .nav-laravel ul li a {
+    color: #000
+  }
+}
+
+.menu-icon-laravel {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px
+}
+
+.icon-bar-laravel {
+  width: 25px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--brand-navy);
+  transition: all .3s
+}
+
+.nav-laravel .close-icon-laravel {
+  display: none
+}
+
+@media screen and (max-width:480px) {
+  .nav-laravel ul li a {
+    font-size: 14px
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+  .header-laravel {
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 35px
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .logo img {
+    width: 155px;
+    margin-left: 0
+  }
+
+  .nav-laravel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 25px;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    z-index: 10
+  }
+
+  .nav-laravel.open {
+    transform: translateX(0)
+  }
+
+  .nav-laravel ul {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px
+  }
+
+  .nav-laravel.open .close-icon-laravel {
+    display: block
+  }
+
+  .nav-laravel .close-icon-laravel {
+    align-self: flex-end;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 20px
+  }
+
+  .menu-icon-laravel {
+    display: flex;
+    z-index: 11
+  }
+
+  .header-laravel.sticky .icon-bar-laravel {
+    background: #000
+  }
+
+  .nav-laravel ul li a {
+    color: #000;
+    font-size: 18px
+  }
+
+  .close-toggle-laravel {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 11;
+    font-size: 30px
+  }
+
+  .menu-toggle-laravel {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    z-index: 11
+  }
+}
+
+@media screen and (max-width:768px) {
+  .header-laravel {
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 40px
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .logo img {
+    width: 85px;
+    margin-left: 0
+  }
+
+  .nav-laravel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 25px;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 100vh
+  }
+
+  .nav-laravel.open {
+    transform: translateX(0)
+  }
+
+  .nav-laravel ul {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px
+  }
+
+  .nav-laravel.open .close-icon-laravel {
+    display: block
+  }
+
+  .nav-laravel .close-icon-laravel {
+    align-self: flex-end;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 20px
+  }
+
+  .menu-icon-laravel {
+    display: flex;
+    z-index: 11
+  }
+
+  .header-laravel.sticky .icon-bar-laravel {
+    background: #000
+  }
+
+  .nav-laravel ul li a {
+    color: #000;
+    font-size: 18px
+  }
+
+  .close-toggle-laravel {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 11;
+    font-size: 30px
+  }
+
+  .menu-toggle-laravel {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    z-index: 11
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .header-laravel {
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 40px
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .logo img {
+    width: 85px;
+    margin-left: 0
+  }
+
+  .nav-laravel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 25px;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 100vh
+  }
+
+  .nav-laravel.open {
+    transform: translateX(0)
+  }
+
+  .nav-laravel ul {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px
+  }
+
+  .nav-laravel.open .close-icon-laravel {
+    display: block
+  }
+
+  .nav-laravel .close-icon-laravel {
+    align-self: flex-end;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 20px
+  }
+
+  .menu-icon-laravel {
+    display: flex;
+    z-index: 11
+  }
+
+  .header-laravel.sticky .icon-bar-laravel {
+    background: #000
+  }
+
+  .nav-laravel ul li a {
+    color: #000;
+    font-size: 18px
+  }
+
+  .close-toggle-laravel {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 11;
+    font-size: 30px
+  }
+
+  .menu-toggle-laravel {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    z-index: 11
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .menu-toggle-laravel {
+    display: none
+  }
+
+  .header-laravel {
+    padding: 12px max(var(--site-gutter), calc((100% - var(--site-container)) / 2))
+  }
+
+  .logo {
+    flex-shrink: 0
+  }
+
+  .logo img {
+    width: 90px;
+    display: block
+  }
+
+  .nav-laravel {
+    min-width: 0;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px
+  }
+
+  .nav-laravel ul {
+    margin: 0;
+    align-items: center
+  }
+}
