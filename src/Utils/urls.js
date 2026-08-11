@@ -12,7 +12,7 @@ const urls = {
       if (window.location.href.includes("https://www.salarytopup.com")) return 'https://salarytopup.in/api';
       return 'http://localhost:8000/salarytopup/api';
    },
-   BASE_API_URL:"http://localhost:3000/api/v1/",
+   BASE_API_URL:" https://staging.salarytopup.in/node-api/api/v1/",
    LMS_API_URL : 'https://staging.salarytopup.in/api/Api/',
     loan:{
       

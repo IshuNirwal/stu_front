@@ -5,18 +5,26 @@ import Login from "./journey-pages/login.jsx";
 
 import { Link, useNavigate } from "react-router-dom";
 import { isEmpty } from "../Utils/common.js";
+import { useSelector } from "react-redux";
 
 const ApplyForLoan = (props) => {
   const navigate = useNavigate();
-
+  const customerDetails = useSelector((state) => state.customerJourneyDetails.customerDetails);
   const [loanAmount, setLoanAmount] = useState(50000);
   const [loanPeriod, setLoanPeriod] = useState(7);
   const [interestRate, setInterestRate] = useState(0.25);
-
+  const checklogin = customerDetails?.token;
   const totalInterest = (loanAmount * interestRate * loanPeriod) / 100;
   const totalPayment = loanAmount + totalInterest;
 
 
+
+  useEffect(() => {
+
+    if ((checklogin)) {
+      navigate('/journey');
+    }
+  }, [checklogin])
  
 
   return (
