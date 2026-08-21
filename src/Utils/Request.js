@@ -1,35 +1,30 @@
 import axios from 'axios';
+import { getStorage } from './common';
 import store from '../store/store';
 
-
-
 class Request {
-
-	constructor(dispatch, customerDetails, successFn, errorFn) {
+	constructor(dispatch, successFn, errorFn) {
 		this.successFn = typeof successFn === 'function' ? successFn : () => {};
 		this.errorFn = typeof errorFn === 'function' ? errorFn : () => {};
 		this.dispatch = typeof dispatch === 'function' ? dispatch : () => {};
-		this.customerDetails = customerDetails || {};
 	}
 
 	instance() {
 		const headers = {
 			"Content-Type": "application/json; charset=UTF-8",
 			"Accept": "application/json",
-			
 		};
-        
-		const state = store.getState();
-		const token = state.customerJourneyDetails?.customerDetails?.token || null;
-		if (token){
-		headers.authorization = token; 
-		}
 
+		const token = getStorage("token");
+		if (token) {
+			headers.Authtoken = token;
+		} else {
+			headers.Auth = "MjQ4ZmY5MGM0MmM2N2EyOTJlZWE0MTBiNGU2Y2Q2NzU=";
+		}
 
 		const instance = axios.create({
 			baseURL: '',
 			headers,
-			
 		});
 
 		return instance;
@@ -95,3 +90,5 @@ class Request {
 }
 
 export default Request;
+
+

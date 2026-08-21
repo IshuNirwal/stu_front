@@ -1,17 +1,22 @@
 
 const urls = {
+   // get BASE_IMAGE_URL() {
+   //    if (window.location.href.includes("staging.salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
+   //    if (window.location.href.includes("https://salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
+   //    if (window.location.href.includes("https://www.salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
+   //    return 'http://localhost/salarytopup/upload/';
+   // },
+   // get API_BASEPATH() {
+   //    if (window.location.href.includes("staging.salarytopup.com")) return 'https://staging.salarytopup.in/api';
+   //    if (window.location.href.includes("https://salarytopup.com")) return 'https://salarytopup.in/api';
+   //    if (window.location.href.includes("https://www.salarytopup.com")) return 'https://salarytopup.in/api';
+   //    return 'http://localhost:8000/salarytopup/api';
+   // },
    get BASE_IMAGE_URL() {
-      if (window.location.href.includes("staging.salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
-      if (window.location.href.includes("https://salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
-      if (window.location.href.includes("https://www.salarytopup.com")) return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
-      return 'http://localhost/salarytopup/upload/';
+     
+      return 'https://baidstock.s3.ap-south-1.amazonaws.com/upload/';
    },
-   get API_BASEPATH() {
-      if (window.location.href.includes("staging.salarytopup.com")) return 'https://staging.salarytopup.in/api';
-      if (window.location.href.includes("https://salarytopup.com")) return 'https://salarytopup.in/api';
-      if (window.location.href.includes("https://www.salarytopup.com")) return 'https://salarytopup.in/api';
-      return 'http://localhost:8000/salarytopup/api';
-   },
+   API_BASEPATH: "https://salarytopup.in/api",
    BASE_API_URL:" https://staging.salarytopup.in/node-api/api/v1/",
    LMS_API_URL : 'https://staging.salarytopup.in/api/Api/',
     loan:{
