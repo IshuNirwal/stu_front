@@ -1,4 +1,5 @@
 import Request from "./Request";
+import Request1 from "./Request2";
 import urls from "./urls";
 import store from '../store/store';
 
@@ -8,23 +9,29 @@ const apiRequest = new Request(
   () => {}
 );
 
+const apiRequest1 = new Request1(
+  () => {},
+  () => {},
+  () => {}
+);
+
 
 export const userdata = (params) => {
-	return apiRequest.post(`${urls.API_BASEPATH}${urls.loan.USER_DATA}`, params);
+	return apiRequest1.post(`${urls.API_BASEPATH}${urls.loan.USER_DATA}`, params);
 };
 
 
 
 export const orderId = (params) => {
-	return apiRequest.post(`${urls.API_BASEPATH}${urls.loan.GENERATE_ORDER_ID}`,params);
+	return apiRequest1.post(`${urls.API_BASEPATH}${urls.loan.GENERATE_ORDER_ID}`,params);
 };
 
 
 export const allBlog = (params) => {
-	return apiRequest.post(`${urls.API_BASEPATH}${urls.loan.ALL_BLOGS}`,params);
+	return apiRequest1.post(`${urls.API_BASEPATH}${urls.loan.ALL_BLOGS}`,params);
 };
 export const blogDetail = (params) => {
-	return apiRequest.post(`${urls.API_BASEPATH}${urls.loan.BLOG_DETAILS}`,params);
+	return apiRequest1.post(`${urls.API_BASEPATH}${urls.loan.BLOG_DETAILS}`,params);
 };
 
 
