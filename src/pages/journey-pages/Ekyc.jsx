@@ -21,6 +21,14 @@ const styles = `
 
   .ekycv2 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  .ekycv2-error {
+  margin: 8px 0 0;
+  color: #dc2626;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
   .ekycv2 {
     --navy-dark: #1f4a5c;
     --navy: #2e6279;
@@ -391,6 +399,7 @@ const STEPS = [
 export default function Ekyc() {
   const [loader, setLoader] = useState(false);
   const [aadhaar, setAadhaar] = useState(Array(12).fill(''));
+  const [aadhaarError, setAadhaarError] = useState('');
   const customerDetails = useSelector((state) => state?.customerJourneyDetails?.customerDetails);
   const dispatch = useDispatch();
 
@@ -452,21 +461,26 @@ export default function Ekyc() {
   };
 
   const handleChange = (value, index) => {
-    // Prevent editing first 8 digits
-    if (index < 8) return;
+  // Prevent editing first 8 digits
+  if (index < 8) return;
 
-    // Allow only single digit
-    if (!/^\d?$/.test(value)) return;
+  // Allow only single digit
+  if (!/^\d?$/.test(value)) return;
 
-    const updated = [...aadhaar];
-    updated[index] = value;
-    setAadhaar(updated);
+  const updated = [...aadhaar];
+  updated[index] = value;
+  setAadhaar(updated);
 
-    // Move to next input automatically
-    if (value && index < 11) {
-      document.getElementById(`aadhaar-${index + 1}`)?.focus();
-    }
-  };
+  // Clear error when user starts correcting
+  if (aadhaarError) {
+    setAadhaarError('');
+  }
+
+  // Move to next input automatically
+  if (value && index < 11) {
+    document.getElementById(`aadhaar-${index + 1}`)?.focus();
+  }
+};
   const leadId =  customerDetails?.lead_id;
 
   useEffect(() => {
@@ -501,9 +515,11 @@ export default function Ekyc() {
     const last4 = aadhaar.slice(8).join('');
 
     if (!/^\d{4}$/.test(last4)) {
-      toast.error('Enter correct last 4 digit Aadhaar number');
+      setAadhaarError('Please enter all 4 digits of your Aadhaar number.');
       return;
     }
+
+    setAadhaarError('');
 
     setLoader(true);
 
@@ -549,29 +565,41 @@ export default function Ekyc() {
                 <span className="hint">last 4 digits only</span>
               </label>
               <div className="ekycv2-boxes">
-                {aadhaar.map((digit, index) => {
-                  const isEditable = index >= 8;
-                  const showSep = index === 3 || index === 7;
-                  return (
-                    <React.Fragment key={index}>
-                      <input
-                        id={`aadhaar-${index}`}
-                        type="text"
-                        inputMode="numeric"
-                        maxLength={1}
-                        value={isEditable ? digit : ''}
-                        placeholder={isEditable ? '0' : '•'}
-                        readOnly={!isEditable}
-                        onChange={(e) => handleChange(e.target.value, index)}
-                        onKeyDown={(e) => handleKeyDown(e, index)}
-                        aria-label={`Aadhaar digit ${index + 1}`}
-                        className={`ekycv2-box ${isEditable ? 'editable' : 'locked'}${isEditable && digit ? ' has-val' : ''}`}
-                      />
-                      {showSep && <span className="ekycv2-sep" aria-hidden="true" />}
-                    </React.Fragment>
-                  );
-                })}
-              </div>
+              {aadhaar.map((digit, index) => {
+                const isEditable = index >= 8;
+                const showSep = index === 3 || index === 7;
+
+                return (
+                  <React.Fragment key={index}>
+                    <input
+                      id={`aadhaar-${index}`}
+                      type="text"
+                      inputMode="numeric"
+                      maxLength={1}
+                      value={isEditable ? digit : ''}
+                      placeholder={isEditable ? '0' : '•'}
+                      readOnly={!isEditable}
+                      onChange={(e) => handleChange(e.target.value, index)}
+                      onKeyDown={(e) => handleKeyDown(e, index)}
+                      aria-label={`Aadhaar digit ${index + 1}`}
+                      className={`ekycv2-box ${isEditable ? 'editable' : 'locked'}${
+                        isEditable && digit ? ' has-val' : ''
+                      }`}
+                    />
+
+                    {showSep && (
+                      <span className="ekycv2-sep" aria-hidden="true" />
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+            {aadhaarError && (
+              <p className="ekycv2-error">
+                {aadhaarError}
+              </p>
+            )}
               <p className="ekycv2-mask-note">
                 <IconShield />
                 First 8 digits stay masked for your privacy — we never see your full Aadhaar.
